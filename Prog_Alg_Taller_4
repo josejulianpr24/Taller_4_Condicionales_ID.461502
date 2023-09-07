@@ -1,0 +1,358 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNRDZVICEwBiA6K5GYTe22a",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/josejulianpr24/Taller_4_Condicionales_ID.461502/blob/main/Prog_Alg_Taller_4\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "$$Taller 4: Estructura Selec/va Doble (if - else)$$\n",
+        "\n",
+        "Nombre: Jose Julian Perez Ramos\n",
+        "\n",
+        "Programa: Ingenieria Civil\n",
+        "\n",
+        "Curso: Programacion\n",
+        "\n",
+        "ID: 000461502\n",
+        "\n",
+        "Email:josej.perez@upb.edu.co\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "6i0KPU84Osvl"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#1. Calculadora de calificaciones#\n",
+        "\n",
+        "Escribe un programa en Python que solicite al usuario ingresar una calificación numérica (de 0 a 5)\n",
+        "y luego muestre un mensaje que diga si el estudiante aprobó o reprobó. UDliza una estructura\n",
+        "selecDva doble (if - else)"
+      ],
+      "metadata": {
+        "id": "RQaTxK9NRUqW"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Solicitar al usuario ingresar una calificación numérica\n",
+        "calificacion = float(input(\"Ingrese la calificación numérica (de 0 a 10): \"))\n",
+        "\n",
+        "# Verificar si la calificación está en el rango válido (0 a 10)\n",
+        "if 0 <= calificacion <= 10:\n",
+        "    # Comprobar si el estudiante cheo aprobó (calificación mayor o igual a 8)\n",
+        "    if calificacion >= 8:\n",
+        "                  print(\"Cheo  aprobó.\")\n",
+        "    else:\n",
+        "                  print(\"Cheo reprobó.\")\n",
+        "else:\n",
+        "    print(\"La calificación ingresada no está en el rango válido (de 0 a 10).\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "okzmsuWCQKJP",
+        "outputId": "d5b9a112-f396-4575-a549-35f6d319f49f"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ingrese la calificación numérica (de 0 a 10): 7\n",
+            "Cheo reprobó.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#2. Verificar si un número es positivo, negativo o cero#\n",
+        "\n",
+        "Escribe un programa en Python que solicite al usuario ingresar un número y luego determine e\n",
+        "imprima si el número es positivo, negativo o cero uDlizando estructuras selecioDvas doble (if - else)"
+      ],
+      "metadata": {
+        "id": "f_-Jx85zR1zQ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numero = float(input(\"Ingresa un número: \"))\n",
+        "\n",
+        "# Verificar si el número es negativo, positivo o cero\n",
+        "if numero > 0:\n",
+        "    print(\"El número ingresado es positivo.\")\n",
+        "elif numero < 0:\n",
+        "    print(\"El número ingresado es negativo.\")\n",
+        "else:\n",
+        "    print(\"El número ingresado es igual a cero.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Utwv3nYxRPvo",
+        "outputId": "c6e48ef9-66fb-452e-86cf-827a41d03a6e"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ingresa un número: 13\n",
+            "El número ingresado es positivo.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#3. Validación de contraseña#\n",
+        "\n",
+        "Escribe un programa en Python que solicite al usuario ingresar una contraseña. Si la contraseña es\n",
+        "\"python123\", el programa debe imprimir \"Contraseña válida\". De lo contrario, debe imprimir\n",
+        "\"Contraseña incorrecta\". UDliza una estructura selecDva doble (if - else)."
+      ],
+      "metadata": {
+        "id": "FERJKXHgYg4L"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "contrasena = input(\"Por favor, ingresa tu contraseña: \")\n",
+        "\n",
+        "# Definir la contraseña válida\n",
+        "contrasena_valida = \"josecheo\"\n",
+        "\n",
+        "# Comprobar si la contraseña ingresada es igual a la contraseña válida\n",
+        "if contrasena == contrasena_valida:\n",
+        "    print(\"Contraseña válida\")\n",
+        "else:\n",
+        "    print(\"Contraseña incorrecta\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UYBnjFG2Yh7R",
+        "outputId": "848ffaf4-9159-48a0-a2e1-33b1865e2af9"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Por favor, ingresa tu contraseña: josecheo\n",
+            "Contraseña válida\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#4. Determinar si un número es par o impar#\n",
+        "\n",
+        "Escribe un programa en Python que solicite al usuario ingresar un número y determine e imprima si\n",
+        "el número es par o impar uDlizando una estructura selecDva doble (if - else)."
+      ],
+      "metadata": {
+        "id": "mwJZN8xnd8Ku"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numero = int(input(\"Ingrese un número: \"))\n",
+        "\n",
+        "# Comprobar si el número es par o impar\n",
+        "if numero % 2 == 0:\n",
+        "    print(\"El número\", numero, \"es par.\")\n",
+        "else:\n",
+        "    print(\"El número\", numero, \"es impar.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "N690cVXrd6wt",
+        "outputId": "5e3336e2-1e7f-4cbc-ac5a-1bc07481960d"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ingrese un número: 11\n",
+            "El número 11 es impar.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#5. Determinar el número mayor#\n",
+        "\n",
+        "Escribe un programa en Python que solicite al usuario ingresar cinco números y luego determine e\n",
+        "imprima cuál de los cinco números es mayor uDlizando estructuras selecDvas doble (if - else)."
+      ],
+      "metadata": {
+        "id": "i5COweR7iVG-"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Solicitar al usuario ingresar cinco números\n",
+        "numero110 = float(input(\"Ingrese el primer número: \"))\n",
+        "numero220 = float(input(\"Ingrese el segundo número: \"))\n",
+        "numero3300 = float(input(\"Ingrese el tercer número: \"))\n",
+        "numero440 = float(input(\"Ingrese el cuarto número: \"))\n",
+        "numero550 = float(input(\"Ingrese el quinto número: \"))\n",
+        "\n",
+        "# Utilizar estructuras de selección doble para determinar el número mayor\n",
+        "if numero110 > numero220:\n",
+        "                     mayor = numero110\n",
+        "else:\n",
+        "                     mayor = numero220\n",
+        "\n",
+        "if numero3300 > mayor:\n",
+        "                     mayor = numero3300\n",
+        "\n",
+        "if numero440 > mayor:\n",
+        "                     mayor = numero440\n",
+        "\n",
+        "if numero550 > mayor:\n",
+        "                    mayor = numero550\n",
+        "\n",
+        "# Imprimir el número mayor\n",
+        "print(\"El número mayor es:\", mayor)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "M4sG9H5wiiEU",
+        "outputId": "e4877186-6a20-495d-e373-6895c3aaf49d"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ingrese el primer número: 110\n",
+            "Ingrese el segundo número: 220\n",
+            "Ingrese el tercer número: 3300\n",
+            "Ingrese el cuarto número: 440\n",
+            "Ingrese el quinto número: 550\n",
+            "El número mayor es: 3300.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#6. Categorizar edades#\n",
+        "Escribe un programa en Python que solicite al usuario ingresar una edad y determine e imprima en\n",
+        "qué categoría se encuentra la persona: \"Niño\" (0-12 años), \"Adolescente\" (13-19 años), \"Adulto\"\n",
+        "(20-64 años) o \"Adulto Mayor\" (65 o más años)."
+      ],
+      "metadata": {
+        "id": "J5K8Vlb1kOmb"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Solicita al usuario ingresar una edad\n",
+        "edad = int(input(\"Ingresa tu edad: \"))\n",
+        "\n",
+        "# Determina la categoría de edad\n",
+        "if edad >= 0 and edad <= 12:\n",
+        "    categoria = \"Niño\"\n",
+        "elif edad >= 13 and edad <= 19:\n",
+        "    categoria = \"Adolescente\"\n",
+        "elif edad >= 20 and edad <= 64:\n",
+        "    categoria = \"Adulto\"\n",
+        "else:\n",
+        "    categoria = \"Adulto Mayor\"\n",
+        "\n",
+        "# Imprime la categoría de edad\n",
+        "print(\"La persona se encuentra en la categoría:\", categoria)\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hGzHUBy6nCTT",
+        "outputId": "b63e18f1-0e27-4659-ad11-ef85909b5117"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ingresa tu edad: 20\n",
+            "La persona se encuentra en la categoría: Adulto\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "RX7_whg6kPS8"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
